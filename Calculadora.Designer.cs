@@ -39,6 +39,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btCalc = new System.Windows.Forms.Button();
             this.cmAlt = new System.Windows.Forms.ComboBox();
+            this.MnS = new System.Windows.Forms.MenuStrip();
+            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnVer = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnS.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +64,7 @@
             this.tbFrente.Name = "tbFrente";
             this.tbFrente.Size = new System.Drawing.Size(70, 26);
             this.tbFrente.TabIndex = 5;
+            this.tbFrente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFrente_KeyPress);
             // 
             // tbLateral
             // 
@@ -66,6 +73,7 @@
             this.tbLateral.Name = "tbLateral";
             this.tbLateral.Size = new System.Drawing.Size(70, 26);
             this.tbLateral.TabIndex = 7;
+            this.tbLateral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLateral_KeyPress);
             // 
             // label2
             // 
@@ -95,6 +103,7 @@
             this.tbAvulso.Size = new System.Drawing.Size(70, 26);
             this.tbAvulso.TabIndex = 11;
             this.tbAvulso.Text = "0";
+            this.tbAvulso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAvulso_KeyPress);
             // 
             // label4
             // 
@@ -111,7 +120,7 @@
             this.tbRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRes.Location = new System.Drawing.Point(142, 255);
             this.tbRes.Name = "tbRes";
-            this.tbRes.Size = new System.Drawing.Size(173, 26);
+            this.tbRes.Size = new System.Drawing.Size(86, 26);
             this.tbRes.TabIndex = 13;
             // 
             // label5
@@ -126,9 +135,9 @@
             // 
             // btCalc
             // 
-            this.btCalc.Location = new System.Drawing.Point(65, 314);
+            this.btCalc.Location = new System.Drawing.Point(97, 314);
             this.btCalc.Name = "btCalc";
-            this.btCalc.Size = new System.Drawing.Size(182, 36);
+            this.btCalc.Size = new System.Drawing.Size(163, 36);
             this.btCalc.TabIndex = 14;
             this.btCalc.Text = "Calcular";
             this.btCalc.UseVisualStyleBackColor = true;
@@ -162,6 +171,47 @@
             this.cmAlt.TabStop = false;
             this.cmAlt.Tag = "";
             // 
+            // MnS
+            // 
+            this.MnS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.arquivoToolStripMenuItem,
+            this.sobreToolStripMenuItem});
+            this.MnS.Location = new System.Drawing.Point(0, 0);
+            this.MnS.Name = "MnS";
+            this.MnS.Size = new System.Drawing.Size(338, 24);
+            this.MnS.TabIndex = 16;
+            this.MnS.Text = "menuStrip1";
+            // 
+            // arquivoToolStripMenuItem
+            // 
+            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnClose});
+            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Text = "Arquivo";
+            // 
+            // mnClose
+            // 
+            this.mnClose.Name = "mnClose";
+            this.mnClose.Size = new System.Drawing.Size(109, 22);
+            this.mnClose.Text = "Fechar";
+            this.mnClose.Click += new System.EventHandler(this.MnClose);
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnVer});
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            // 
+            // MnVer
+            // 
+            this.MnVer.Name = "MnVer";
+            this.MnVer.Size = new System.Drawing.Size(108, 22);
+            this.MnVer.Text = "Versão";
+            this.MnVer.Click += new System.EventHandler(this.MnVers);
+            // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,9 +229,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbFrente);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.MnS);
+            this.MainMenuStrip = this.MnS;
+            this.MaximizeBox = false;
             this.Name = "Calculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
+            this.MnS.ResumeLayout(false);
+            this.MnS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +255,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btCalc;
         private System.Windows.Forms.ComboBox cmAlt;
+        private System.Windows.Forms.MenuStrip MnS;
+        private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnClose;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MnVer;
     }
 }
 

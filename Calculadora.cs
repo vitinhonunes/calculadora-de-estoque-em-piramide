@@ -6,7 +6,40 @@ namespace AppCalculo
 {
     public partial class Calculadora : Form
     {
-        int Fre,Lat,Alt,Avu,Res = 0;
+        int Fre, Lat, Alt, Avu, Res = 0;
+        public void Restri(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+                e.Handled = true;
+        }
+
+        private void tbLateral_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Restri(sender, e);
+        }
+
+        private void tbAvulso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Restri(sender, e);
+        }
+
+        private void MnClose(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MnVers(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desenvolvido por João Victor - Ver.1.0.1","Sobre");
+        }
+
+        private void tbFrente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Restri(sender, e);
+           
+        }
+
+        //decimal Res;
         public Calculadora()
         {
             InitializeComponent();
@@ -180,6 +213,10 @@ namespace AppCalculo
             else if (cmAlt.Text == "")
             {
                 MessageBox.Show("Indique a Altura.");
+            }
+            else if (tbAvulso.Text == "")
+            {
+                tbAvulso.Text = "0";
             }
             else
             {
