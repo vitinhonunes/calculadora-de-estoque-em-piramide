@@ -7,7 +7,6 @@ namespace AppCalculo
     public partial class Calculadora : Form
     {
         int Fre,Lat,Alt,Avu,Res = 0;
-        //decimal Res;
         public Calculadora()
         {
             InitializeComponent();
