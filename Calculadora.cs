@@ -38,8 +38,6 @@ namespace AppCalculo
             Restri(sender, e);
            
         }
-
-        //decimal Res;
         public Calculadora()
         {
             InitializeComponent();
