@@ -51,10 +51,10 @@ namespace AppCalculo
             int r = 0;
 
             //Loop para somar os valores conforme o número de iterações
-            if (Alt == 0 || Alt == 1)
+          /*  if (Alt == 0 || Alt == 1)
             {
                 Res = (Fre * Lat) * Alt + Avu;
-            }
+            }*/
             for (int i = 0; i < Alt; i++)
             {
                 r += (Fre - i) * (Lat - i);
