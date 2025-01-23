@@ -44,6 +44,7 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnVer = new System.Windows.Forms.ToolStripMenuItem();
             this.tbAlt = new System.Windows.Forms.TextBox();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +148,7 @@
             // 
             this.MnS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
+            this.limparToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.MnS.Location = new System.Drawing.Point(0, 0);
             this.MnS.Name = "MnS";
@@ -191,6 +193,13 @@
             this.tbAlt.Name = "tbAlt";
             this.tbAlt.Size = new System.Drawing.Size(70, 26);
             this.tbAlt.TabIndex = 3;
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
             // 
             // Calculadora
             // 
@@ -240,6 +249,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MnVer;
         private System.Windows.Forms.TextBox tbAlt;
+        private System.Windows.Forms.ToolStripMenuItem limparToolStripMenuItem;
     }
 }
 

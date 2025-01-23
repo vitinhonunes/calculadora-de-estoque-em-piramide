@@ -30,7 +30,16 @@ namespace AppCalculo
 
         private void MnVers(object sender, EventArgs e)
         {
-            MessageBox.Show("Desenvolvido por João Victor - Ver.1.0.1","Sobre");
+            MessageBox.Show("Desenvolvido por João Victor Nunes de Oliveira - Ver.1.2.3","Sobre");
+        }
+
+        private void limparToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tbAlt.Clear();
+            tbAvulso.Text = "0";
+            tbFrente.Clear();
+            tbLateral.Clear();
+            tbRes.Clear();
         }
 
         private void tbFrente_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,11 +59,7 @@ namespace AppCalculo
             Avu = int.Parse(tbAvulso.Text);
             int r = 0;
 
-            //Loop para somar os valores conforme o número de iterações
-          /*  if (Alt == 0 || Alt == 1)
-            {
-                Res = (Fre * Lat) * Alt + Avu;
-            }*/
+            //Loop para somar os valores conforme o número de iteraçõe
             for (int i = 0; i < Alt; i++)
             {
                 r += (Fre - i) * (Lat - i);
@@ -65,15 +70,15 @@ namespace AppCalculo
 
         public void btCalc_Click(object sender, EventArgs e)
         {
-            if (tbFrente.Text == "")
+            if (tbFrente.Text == "" || tbFrente.Text == "0")
             {
                 MessageBox.Show("Digite o Valor da Frente.");
             }
-            else if (tbLateral.Text == "")
+            else if (tbLateral.Text == "" || tbLateral.Text == "0")
             {
                 MessageBox.Show("Digite o Valor da Lateral.");
             }
-            else if (tbAlt.Text == "")
+            else if (tbAlt.Text == "" || tbAlt.Text == "0")
             {
                 MessageBox.Show("Digite o Valor da Altura.");
             }
