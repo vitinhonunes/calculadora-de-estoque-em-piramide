@@ -9,8 +9,12 @@ namespace AppCalculo
         int Fre, Lat, Alt, Avu, Res = 0;
         public void Restri(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-                e.Handled = true;
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != '-' &&
+                !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Impede que o caractere seja inserido
+            }
         }
 
         private void tbLateral_KeyPress(object sender, KeyPressEventArgs e)

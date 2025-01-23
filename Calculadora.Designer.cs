@@ -41,10 +41,10 @@
             this.MnS = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnVer = new System.Windows.Forms.ToolStripMenuItem();
             this.tbAlt = new System.Windows.Forms.TextBox();
-            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnS.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.tbFrente.Name = "tbFrente";
             this.tbFrente.Size = new System.Drawing.Size(70, 26);
             this.tbFrente.TabIndex = 1;
-            this.tbFrente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFrente_KeyPress);
+            this.tbFrente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Restri);
             // 
             // tbLateral
             // 
@@ -74,7 +74,7 @@
             this.tbLateral.Name = "tbLateral";
             this.tbLateral.Size = new System.Drawing.Size(70, 26);
             this.tbLateral.TabIndex = 2;
-            this.tbLateral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLateral_KeyPress);
+            this.tbLateral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Restri);
             // 
             // label2
             // 
@@ -104,7 +104,7 @@
             this.tbAvulso.Size = new System.Drawing.Size(70, 26);
             this.tbAvulso.TabIndex = 4;
             this.tbAvulso.Text = "0";
-            this.tbAvulso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAvulso_KeyPress);
+            this.tbAvulso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Restri);
             // 
             // label4
             // 
@@ -123,6 +123,7 @@
             this.tbRes.Name = "tbRes";
             this.tbRes.Size = new System.Drawing.Size(86, 26);
             this.tbRes.TabIndex = 5;
+            this.tbRes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Restri);
             // 
             // label5
             // 
@@ -171,6 +172,13 @@
             this.mnClose.Text = "Fechar";
             this.mnClose.Click += new System.EventHandler(this.MnClose);
             // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -193,13 +201,7 @@
             this.tbAlt.Name = "tbAlt";
             this.tbAlt.Size = new System.Drawing.Size(70, 26);
             this.tbAlt.TabIndex = 3;
-            // 
-            // limparToolStripMenuItem
-            // 
-            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
-            this.limparToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.limparToolStripMenuItem.Text = "Limpar";
-            this.limparToolStripMenuItem.Click += new System.EventHandler(this.limparToolStripMenuItem_Click);
+            this.tbAlt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Restri);
             // 
             // Calculadora
             // 
